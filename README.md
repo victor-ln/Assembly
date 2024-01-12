@@ -10,6 +10,8 @@
     - [Data](#data-section)
     - [Program Entrypoint](#program-entrypoint)
 
+- [Memory Segments](#memory-segments)
+
 - [Assembly Language Statements](#assembly-language-statements)
     - [Executable Instructions](#executable-instructions)
     - [Assembler Directives or Pseudo-Ops](#assembler-directives-or-pseudo-ops)
@@ -41,6 +43,27 @@ An assembly program typically consists of three main sections:
 #### Program Entrypoint
 
 The `start` label is often used as the entry point as mentioned before. The `global` keyword is utilized to make an identifier accessible to the linker. Labels are essential for naming locations in the code, providing structure to the program.
+
+## Memory Segments
+
+As discussed above, there are three sections of an assembly program, which also represent various memory segments.
+Interestingly, if you replace the `section` keyword with `segment`, you will get the same result.
+
+A segmented memory model divides the system memory into groups of independent segments referenced by pointers located in the segment registers. Each segment is used to contain a specific type of data. One segment is used to contain instruction codes, another segment stores the data elements, and a third segment keeps the program stack.
+
+In the light of the above discussion, we can specify various memory segments as
+
+### Data segment
+
+It is represented by .data section and the .bss.
+
+### Code segment
+
+It is represented by .text section.
+
+### Stack
+
+This segment contains data values passed to functions and procedures within the program. Data may be initialized at run-time. It acts as temporary storage and follows the Last In First Out protocol, which means that elements are only added or removed from the top.
 
 ## Assembly Language Statements
 
