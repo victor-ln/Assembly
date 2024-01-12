@@ -10,6 +10,11 @@
     - [Data](#data-section)
     - [Program Entrypoint](#program-entrypoint)
 
+- [Assembly Language Statements](#assembly-language-statements)
+    - [Executable Instructions](#executable-instructions)
+    - [Assembler Directives or Pseudo-Ops](#assembler-directives-or-pseudo-ops)
+    - [Macros](#macros)
+
 - [Compilation and Execution](#compilation-and-execution)
     - [Compile with NASM](#compile-with-nasm)
     - [Link with ld](#link-with-ld)
@@ -41,7 +46,7 @@ The `start` label is often used as the entry point as mentioned before. The `glo
 
 Assembly language programs consist of three types of statements:
 
-### 1. Executable Instructions
+### Executable Instructions
    - These instructions, or simply instructions, tell the processor what to do.
    - Each instruction consists of an operation code (opcode).
    - Each executable instruction generates one machine language instruction.
@@ -51,7 +56,7 @@ Assembly language programs consist of three types of statements:
    add ebx, eax      ; Add the value in eax to the value in ebx
 ```
 
-### 2. Assembler Directives or Pseudo-Ops
+### Assembler Directives or Pseudo-Ops
    - These directives or pseudo-ops inform the assembler about various aspects of the assembly process.
    - They are non-executable and do not generate machine language instructions.
 
@@ -60,7 +65,7 @@ section .data        ; Start the data section
     variable db 10   ; Define a byte variable with initial value 10
 ```
 
-### 3. Macros
+### Macros
    - Macros are a text substitution mechanism.
    - They allow for code reuse and simplification by substituting predefined text in place of the macro call.
 
