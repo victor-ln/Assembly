@@ -47,7 +47,16 @@ The `start` label is often used as the entry point as mentioned before. The `glo
 Assembly language programs consist of three types of statements:
 
 ### Executable Instructions
-   - These instructions, or simply instructions, tell the processor what to do.
+
+#### Syntax
+
+Instructions are entered one statement per line. Each one follows the following format:
+
+\[label\] mnemonic \[operands\] ;comment
+
+The fields in the square brackets are optional. A basic instruction has two parts: the first one is the name of the instruction (or the mnemonic), which is to be executed, and the second are the operands or the parameters of the command.
+
+   - These executable instructions, or simply instructions, tell the processor what to do.
    - Each instruction consists of an operation code (opcode).
    - Each executable instruction generates one machine language instruction.
 
